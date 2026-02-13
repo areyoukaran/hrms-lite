@@ -5,7 +5,7 @@ This system allows an admin to manage employees and track attendance with a clea
 
 This project was developed as a **full-stack assignment**, focusing on structure, correctness, usability, and real-world engineering practices.
 
-
+### Demo Video: [Click this link](https://drive.google.com/file/d/1w_R2Flmj9PRk2YiszR8CuTpSQjxkv3ot/view?usp=sharing)
 
 ## Features
 
