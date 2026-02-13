@@ -248,4 +248,4 @@ This project demonstrates:
 
 ## 👤 Author
 **Karan Kashyap**  
-HRMS Lite – Full-Stack Assignment**
+**HRMS Lite – Full-Stack Assignment**
