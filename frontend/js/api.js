@@ -1,12 +1,12 @@
-const BASE_URL = "https://hrms-lite-backend-6j83.onrender.com";
+const API_BASE = "https://hrms-lite-backend-6j83.onrender.com/api";
 
 async function apiGet(path) {
-  const res = await fetch(BASE_URL + path);
+  const res = await fetch(API_BASE + path);
   return res.json();
 }
 
 async function apiPost(path, data) {
-  const res = await fetch(BASE_URL + path, {
+  const res = await fetch(API_BASE + path, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
@@ -15,7 +15,7 @@ async function apiPost(path, data) {
 }
 
 async function apiPut(path, data) {
-  const res = await fetch(BASE_URL + path, {
+  const res = await fetch(API_BASE + path, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
@@ -24,5 +24,8 @@ async function apiPut(path, data) {
 }
 
 async function apiDelete(path) {
-  await fetch(BASE_URL + path, { method: "DELETE" });
+  const res = await fetch(API_BASE + path, {
+    method: "DELETE"
+  });
+  return res.json();
 }
