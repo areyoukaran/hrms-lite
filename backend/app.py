@@ -11,8 +11,14 @@ def create_app():
 
     db.init_app(app)
 
-    # ✅ VERY IMPORTANT
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    # ✅ ALLOW FRONTEND DOMAIN
+    CORS(app, resources={
+        r"/api/*": {
+            "origins": [
+                "https://hrms-lite-frontend-87r7.onrender.com"
+            ]
+        }
+    })
 
     app.register_blueprint(employee_bp)
     app.register_blueprint(attendance_bp)
@@ -21,6 +27,3 @@ def create_app():
     return app
 
 app = create_app()
-
-if __name__ == "__main__":
-    app.run()
