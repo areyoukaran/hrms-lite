@@ -1,0 +1,90 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: var(--card);
+  padding: 36px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(15,23,42,0.08);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.card p {
+  margin-top: 18px;
+  font-size: 42px;
+  font-weight: 700;
+}
+/* =======================
+   DASHBOARD CARDS (REFINED)
+======================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.dashboard-card {
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Icon container */
+.dashboard-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* Color variants */
+.icon-purple {
+  background: #f1eafe;
+  color: #5b2d8b;
+}
+
+.icon-green {
+  background: #e8fbf2;
+  color: #16a34a;
+}
+
+.icon-yellow {
+  background: #fff7e6;
+  color: #d97706;
+}
+
+/* Text block */
+.dashboard-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dashboard-info .dashboard-value {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.dashboard-info .dashboard-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}

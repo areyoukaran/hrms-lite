@@ -1,0 +1,114 @@
+/* HEADER */
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.attendance-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.attendance-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* DATE PICKER */
+.date-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  font-weight: 600;
+}
+
+/* CARD */
+.attendance-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 10px;
+}
+
+/* TABLE */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th {
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 18px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.attendance-table td {
+  padding: 20px 18px;
+  border-bottom: 1px solid #edf0f6;
+  font-size: 16px;
+}
+
+.attendance-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* EMPLOYEE CELL */
+.att-emp {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.att-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e9e3f3;
+  color: var(--primary);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.att-name {
+  font-weight: 600;
+}
+
+.att-id {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* STATUS */
+.status-text {
+  font-weight: 600;
+  color: #374151;
+}
+
+.radio {
+  margin-right: 18px;
+  font-weight: 600;
+}
+
+/* TOTAL */
+.total-present {
+  font-weight: 700;
+}
+
+/* FOOTER */
+.attendance-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 18px;
+}

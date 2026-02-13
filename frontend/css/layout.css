@@ -1,0 +1,131 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 360px;
+  background: var(--sidebar-bg);
+  padding: 36px 26px;
+  border-right: 1px solid var(--border-light);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  font-size: 20px;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: var(--radius-md);
+}
+
+.nav-btn i {
+  font-size: 20px;
+}
+
+.nav-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 88px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  padding: 40px;
+  overflow-y: auto;
+}
+/* =======================
+   SIDEBAR FOOTER (PROMINENT)
+======================= */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Footer stays at bottom */
+.sidebar-footer {
+  margin-top: auto;
+  padding: 28px 16px 32px;
+  text-align: center;
+}
+
+/* Text styling */
+.sidebar-footer .powered {
+  font-size: 15px;              /* bigger */
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* Highlight ethara.ai */
+.sidebar-footer .powered strong {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 16px;              /* slightly larger */
+  font-weight: 700;             /* bold */
+  color: var(--primary);        /* brand highlight */
+}

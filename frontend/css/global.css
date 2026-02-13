@@ -1,0 +1,481 @@
+:root {
+  --bg-main: #f6f7fb;
+  --bg-card: #ffffff;
+  --sidebar-bg: #f4f5fa;
+
+  --primary: #5b2d8b;        /* purple accent */
+  --primary-soft: #efe6f7;
+
+  --text-main: #0f172a;
+  --text-muted: #6b7280;
+
+  --border-light: #e6e8f0;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-size: 17px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+input, select {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  font-size: 15px;
+}
+/* =======================
+   ENTERPRISE DESIGN SYSTEM
+======================= */
+
+/* Font & base scale */
+:root {
+  --font-main: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+
+  --color-primary: #5b2d8b;
+  --color-bg: #f4f6fb;
+  --color-card: #ffffff;
+  --color-border: #e6e8f0;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 16px;            /* BASE readable size */
+  line-height: 1.6;
+}
+
+/* Headings hierarchy */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Small text consistency */
+.small,
+.employee-sub,
+.powered,
+.panel-label {
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-main);
+  font-size: 15px;
+  border-radius: var(--radius-md);
+}
+
+/* Cards everywhere */
+.card,
+.employee-card,
+.attendance-card,
+.dashboard-card {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+/* =======================
+   SKELETON LOADING (DATA FETCH)
+======================= */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #eceef4 25%,
+    #f5f6fa 37%,
+    #eceef4 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Skeleton row height */
+.skeleton-row td {
+  padding: 22px;
+}
+
+.skeleton-text {
+  height: 16px;
+  width: 100%;
+}
+
+.skeleton-text.small {
+  width: 60%;
+}
+
+.skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/* =======================
+   GLOBAL VISUAL HIERARCHY
+======================= */
+
+/* Stronger headings everywhere */
+h1 {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Primary numbers (dashboard stats, totals) */
+.stat-number,
+.dashboard-value {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Labels */
+.stat-label,
+.dashboard-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+/* ---------- PROFILE OVERLAY ---------- */
+
+.panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.25);
+  z-index: 140;
+}
+/* =================================================
+   GLOBAL INTERACTION & CLICK BEHAVIOR SYSTEM
+   Applies across Dashboard, Sidebar, Directory, Attendance
+================================================= */
+
+/* ---------- DEFAULT: NOTHING IS CLICKABLE ---------- */
+body,
+h1, h2, h3, h4,
+p, span, td, th, div {
+  cursor: default;
+}
+
+/* ---------- REMOVE TEXT SELECTION WHERE NOT NEEDED ---------- */
+.sidebar,
+.nav-btn,
+button,
+.actions,
+.emp-cell,
+.dashboard-card,
+.attendance-card,
+.topbar,
+header {
+  user-select: none;
+}
+
+/* ---------- CLICKABLE ELEMENTS ---------- */
+button,
+.nav-btn,
+.clickable,
+.actions i,
+.emp-name,
+.dashboard-card,
+.attendance-edit-btn,
+.modal-close,
+.panel-close {
+  cursor: pointer;
+}
+
+/* ---------- HOVER FEEDBACK (SUBTLE, PROFESSIONAL) ---------- */
+.nav-btn:hover,
+button:hover,
+.actions i:hover,
+.emp-name:hover {
+  opacity: 0.9;
+}
+
+/* ---------- EMPLOYEE NAME HOVER ---------- */
+.emp-name {
+  transition: color 0.15s ease;
+}
+
+.emp-name:hover {
+  color: var(--primary);
+}
+
+/* ---------- SIDEBAR NAV ---------- */
+.nav-btn {
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+/* ---------- DASHBOARD CARDS ---------- */
+.dashboard-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- TABLE ROW BEHAVIOR ---------- */
+.employee-table tr:hover td {
+  background: #fafbff;
+}
+
+/* ---------- ICONS ---------- */
+.actions i {
+  font-size: 18px;
+  color: #9ca3af;
+  transition: color 0.15s ease;
+}
+
+.actions i:hover {
+  color: var(--primary);
+}
+
+/* ---------- MODALS & PANELS ---------- */
+.modal,
+.side-panel {
+  cursor: default;
+}
+
+/* ---------- LINKS (IF ANY) ---------- */
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+/* =================================================
+   GLOBAL INTERACTION & CLICK BEHAVIOR SYSTEM
+   Applies across Dashboard, Sidebar, Directory, Attendance
+================================================= */
+
+/* ---------- DEFAULT: NOTHING IS CLICKABLE ---------- */
+body,
+h1, h2, h3, h4,
+p, span, td, th, div {
+  cursor: default;
+}
+
+/* ---------- REMOVE TEXT SELECTION WHERE NOT NEEDED ---------- */
+.sidebar,
+.nav-btn,
+button,
+.actions,
+.emp-cell,
+.dashboard-card,
+.attendance-card,
+.topbar,
+header {
+  user-select: none;
+}
+
+/* ---------- CLICKABLE ELEMENTS ---------- */
+button,
+.nav-btn,
+.clickable,
+.actions i,
+.emp-name,
+.dashboard-card,
+.attendance-edit-btn,
+.modal-close,
+.panel-close {
+  cursor: pointer;
+}
+
+/* ---------- HOVER FEEDBACK (SUBTLE, PROFESSIONAL) ---------- */
+.nav-btn:hover,
+button:hover,
+.actions i:hover,
+.emp-name:hover {
+  opacity: 0.9;
+}
+
+/* ---------- EMPLOYEE NAME HOVER ---------- */
+.emp-name {
+  transition: color 0.15s ease;
+}
+
+.emp-name:hover {
+  color: var(--primary);
+}
+
+/* ---------- SIDEBAR NAV ---------- */
+.nav-btn {
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+/* ---------- DASHBOARD CARDS ---------- */
+.dashboard-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- TABLE ROW BEHAVIOR ---------- */
+.employee-table tr:hover td {
+  background: #fafbff;
+}
+
+/* ---------- ICONS ---------- */
+.actions i {
+  font-size: 18px;
+  color: #9ca3af;
+  transition: color 0.15s ease;
+}
+
+.actions i:hover {
+  color: var(--primary);
+}
+
+/* ---------- MODALS & PANELS ---------- */
+.modal,
+.side-panel {
+  cursor: default;
+}
+
+/* ---------- LINKS (IF ANY) ---------- */
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+/* =================================================
+   ABSOLUTE LOCK: TITLES & DESCRIPTIONS
+   These must NEVER look clickable
+================================================= */
+
+h1,
+h2,
+h3,
+h4,
+.employee-sub,
+.dashboard-sub,
+.page-description,
+.small,
+header h1,
+header h2,
+.employee-header h1,
+.employee-header .employee-sub {
+  cursor: default !important;
+  pointer-events: auto !important;
+  user-select: text !important;
+}
+
+/* Even if parent is clickable, force normal cursor */
+.dashboard-card h1,
+.dashboard-card h2,
+.dashboard-card .small,
+.nav-btn h1,
+.nav-btn h2 {
+  cursor: default !important;
+}
+/* =================================================
+   FINAL UX LOCK: NO TEXT CARET ON HEADERS
+================================================= */
+
+/* Disable text selection for titles & descriptions */
+h1,
+h2,
+h3,
+h4,
+.employee-sub,
+.dashboard-sub,
+.page-description,
+header h1,
+header h2,
+.employee-header h1,
+.employee-header .employee-sub {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+  cursor: default !important;
+}
+
+/* Allow selection ONLY where it makes sense */
+input,
+textarea,
+table td,
+table th {
+  user-select: text !important;
+}

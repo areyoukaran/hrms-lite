@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HRMS</title>
+
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/employee.css" />
+  <link rel="stylesheet" href="css/attendance.css" />
+</head>
+
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon"><i class='bx bx-buildings'></i></div>
+      <span>HRMS</span>
+    </div>
+
+    <nav>
+      <button class="nav-btn active" onclick="setActive(this); loadDashboard()">
+        <i class='bx bx-grid-alt'></i>
+        Dashboard
+      </button>
+
+      <button class="nav-btn" onclick="setActive(this); loadEmployees()">
+        <i class='bx bx-user'></i>
+        Directory
+      </button>
+
+      <button class="nav-btn" onclick="setActive(this); loadAttendance()">
+        <i class='bx bx-calendar-check'></i>
+        Attendance
+      </button>
+    </nav>
+
+    <!-- SIDEBAR FOOTER -->
+<div class="sidebar-footer">
+  <span class="powered">
+    Powered by <strong>ethara.ai</strong>
+  </span>
+</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div></div>
+      <div class="admin-profile">
+        <div class="avatar">A</div>
+        <div>
+          <div class="admin-name">Karan Kashyap</div>
+          <div class="admin-role">Admin</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <section id="content"></section>
+
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/employees.js"></script>
+<script src="js/attendance.js"></script>
+
+<script>
+  function setActive(el) {
+    document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("active"));
+    el.classList.add("active");
+  }
+  loadDashboard();
+</script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+/* =======================
+   DIRECTORY TABLE
+======================= */
+
+.employee-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #eef0f6;
+  overflow: hidden;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.employee-table th {
+  padding: 20px 22px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  border-bottom: 1px solid #eef0f6;
+}
+
+.employee-table td {
+  padding: 22px;
+  font-size: 16px;
+  border-bottom: 1px solid #f4f6fb; /* very subtle */
+}
+
+.employee-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* EMPLOYEE CELL */
+.emp-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.emp-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #efe9f6;
+  color: #5b2d8b;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emp-name {
+  font-weight: 600;
+}
+
+/* ACTION ICONS */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 22px; /* space, no divider */
+}
+
+.actions i {
+  font-size: 17px;
+  color: #9ca3af;
+  cursor: pointer;
+  line-height: 1; /* aligns with text height */
+}
+
+.actions i:hover {
+  color: #5b2d8b;
+}
+
+/* =======================
+   MODAL (ADD / EDIT)
+======================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal-content {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 30px 80px rgba(15,23,42,0.25);
+  position: relative;
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+
+/* CLOSE ICON */
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  background: #f4f6fb;
+  font-size: 15px;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #5b2d8b;
+  background: #ffffff;
+}
+
+/* ERROR TEXT */
+.form-error {
+  font-size: 13px;
+  color: #ef4444;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* ACTIONS */
+.modal-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 14px;
+}
+
+/* BUTTON STYLES */
+.btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btn-save {
+  background: #5b2d8b;
+  color: #ffffff;
+}
+
+/* =======================
+   PROFILE SIDE PANEL
+======================= */
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100%;
+  background: #ffffff;
+  border-left: 1px solid #eef0f6;
+  padding: 28px;
+  z-index: 150;
+}
+
+.panel-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.panel-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #efe9f6;
+  color: #5b2d8b;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.panel-name {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.panel-section {
+  border-top: 1px solid #eef0f6;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.panel-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.panel-value {
+  font-size: 15px;
+  font-weight: 600;
+}
+/* =======================
+   ADDITIONS (NON-DESTRUCTIVE)
+   Enterprise polish layer
+======================= */
+
+/* ---------- HEADER ALIGNMENT ---------- */
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.employee-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.employee-sub {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Add Employee button (right side, refined) */
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: #5b2d8b;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn i {
+  font-size: 18px;
+}
+
+/* ---------- SUBTLE VERTICAL GRID LINES ---------- */
+.employee-table th:not(:last-child),
+.employee-table td:not(:last-child) {
+  border-right: 1px solid #f1f3f9; /* very subtle, aligned */
+}
+
+/* ---------- ACTION ICON TOOLTIP ---------- */
+.actions .icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.actions .icon-wrap::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.actions .icon-wrap:hover::after {
+  opacity: 1;
+}
+
+/* ---------- CLICKABLE EMPLOYEE NAME ---------- */
+.emp-cell:hover .emp-name {
+  color: #5b2d8b;
+}
+
+/* ---------- DROPDOWN (DEPARTMENT) ---------- */
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  background: #f4f6fb;
+  font-size: 15px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #5b2d8b;
+  background: #ffffff;
+}
+
+/* ---------- MODAL BUTTON BALANCE ---------- */
+.btn-cancel {
+  border: 1px solid #e5e7eb;
+}
+
+.btn-save {
+  box-shadow: 0 8px 20px rgba(91,45,139,0.25);
+}
+
+/* ---------- POWERED BY TEXT ---------- */
+.powered {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: right;
+}
+/* =======================
+   ENTERPRISE TABLE TEXT WRAPPING
+   (Non-destructive addition)
+======================= */
+
+/* Ensure table layout respects column width */
+.employee-table {
+  table-layout: fixed;
+}
+
+/* Allow wrapping for ALL cells */
+.employee-table th,
+.employee-table td {
+  white-space: normal;        /* allow multiline */
+  word-wrap: break-word;      /* legacy support */
+  overflow-wrap: break-word;  /* modern support */
+  vertical-align: top;        /* consistent alignment */
+}
+
+/* Employee cell content wraps nicely */
+.emp-cell {
+  align-items: flex-start; /* avatar stays top-aligned */
+}
+
+/* Name wraps instead of stretching row sideways */
+.emp-name {
+  max-width: 100%;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Email column: wrap long emails cleanly */
+.employee-table td:nth-child(3) {
+  word-break: break-all; /* emails can be long */
+}
+
+/* Department column wrap */
+.employee-table td:nth-child(4) {
+  word-break: break-word;
+}
+
+/* Maintain consistent row height feel */
+.employee-table td {
+  min-height: 72px; /* subtle enterprise spacing */
+}
+/* ---------- PROFILE OVERLAY ---------- */
+
+.panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.25);
+  z-index: 140;
+}
+/* ---------- CLICK BEHAVIOR POLISH ---------- */
+
+/* Default: normal cursor */
+.employee-table td,
+.employee-table th {
+  cursor: default;
+}
+
+/* Only employee name is clickable */
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover .emp-name {
+  color: var(--primary);
+}
+
+/* Action icons */
+.actions i {
+  cursor: pointer;
+}
+
+/* Prevent text selection where not needed */
+.employee-table td,
+.actions,
+.emp-cell {
+  user-select: none;
+}
+/* TABLE LOADER */
+.table-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #5b2d8b;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
