@@ -1,95 +1,78 @@
-HRMS Lite – Full-Stack Project
+# HRMS Lite – Full-Stack Project
 
-A lightweight Human Resource Management System (HRMS Lite) built as a full-stack web application.
+A lightweight **Human Resource Management System (HRMS Lite)** built as a full-stack web application.  
 This system allows an admin to manage employees and track attendance with a clean, enterprise-style UI.
 
-This project was developed as a full-stack assignment, focusing on structure, correctness, usability, and real-world engineering practices.
+This project was developed as a **full-stack assignment**, focusing on structure, correctness, usability, and real-world engineering practices.
 
-✨ Features
-👤 Employee Directory
+---
 
-Add employees (Employee ID, Name, Email, Department)
+## ✨ Features
 
-Edit employee details
+### 👤 Employee Directory
+- Add employees (Employee ID, Name, Email, Department)
+- Edit employee details
+- Delete employees with confirmation
+- View employees in a structured table
+- Click employee name to open a side profile panel
 
-Delete employees with confirmation
+**Profile panel shows:**
+- Employee details
+- Total Present count
+- Total Absent count
 
-View employees in a structured table
+---
 
-Click employee name to open a side profile panel
+### 📅 Attendance Management
+- Mark attendance as **Present / Absent**
+- View attendance by selected date
+- Edit attendance for **past & current dates**
+- Future dates are **view-only**
+- Table-level loading indicator while fetching data
+- Clear separation between **view mode** and **edit mode**
 
-Profile panel shows:
+---
 
-Employee details
+### 📊 Dashboard
+- Total Employees
+- Total Present Records
+- Clean card-based layout
+- Real-time updates after attendance changes
 
-Total Present count
+---
 
-Total Absent count
+### 🎨 UI & UX
+- Enterprise-grade layout
+- Sidebar navigation (Dashboard / Directory / Attendance)
+- Consistent typography & spacing
+- Subtle table grid lines
+- No full-page reloads
+- Smooth data loading indicators
 
-📅 Attendance Management
+---
 
-Mark attendance as Present / Absent
+## 🧱 Tech Stack
 
-View attendance by selected date
+### Frontend
+- HTML5
+- CSS3 (custom design system)
+- Vanilla JavaScript
+- Boxicons (icons)
 
-Edit attendance for past & current dates
+### Backend
+- Python
+- Flask
+- Flask-SQLAlchemy
+- Flask-CORS
 
-Future dates are view-only
+### Database
+- SQLite (for simplicity and demonstration)
 
-Table-level loading indicator while fetching data
+---
 
-Clear separation between view mode and edit mode
+## 📁 Project Structure
 
-📊 Dashboard
-
-Total Employees
-
-Total Present Records
-
-Clean card-based layout
-
-Real-time updates after attendance changes
-
-🎨 UI & UX
-
-Enterprise-grade layout
-
-Sidebar navigation (Dashboard / Directory / Attendance)
-
-Consistent typography & spacing
-
-Subtle table grid lines
-
-No full-page reloads
-
-Smooth data loading indicators
-
-🧱 Tech Stack
-Frontend
-
-HTML5
-
-CSS3 (custom design system)
-
-Vanilla JavaScript
-
-Boxicons (icons)
-
-Backend
-
-Python
-
-Flask
-
-Flask-SQLAlchemy
-
-Flask-CORS
-
-Database
-
-SQLite (for simplicity and demonstration)
-
-📁 Project Structure
+```text
 hrms-lite/
 │
 ├── backend/
@@ -132,102 +115,42 @@ hrms-lite/
 │       └── icons/
 │
 └── README.md
-🚀 How to Run Locally
-1️⃣ Clone the Repository
+```
+
+---
+
+## ▶️ How to Run Locally
+
+### 🔹 Prerequisites
+- Python 3.9+
+- Git
+- Any modern browser
+
+---
+
+### 🔹 Step 1: Clone Repository
+```
 git clone https://github.com/your-username/hrms-lite.git
+
 cd hrms-lite
-2️⃣ Backend Setup
+```
+
+---
+
+### 🔹 Step 2: Backend Setup
+```
 cd backend
 python -m venv venv
+```
 
 Activate virtual environment:
 
-Windows
-
+**Windows**
+```
 venv\Scripts\activate
-
-Mac / Linux
-
+```
+**Mac / Linux**
+```
 source venv/bin/activate
-
+```
 Install dependencies:
-
-pip install -r requirements.txt
-3️⃣ Initialize Database (Run Once)
-python
-from app import app
-from extensions import db
-
-with app.app_context():
-    db.create_all()
-
-Exit Python:
-
-exit()
-4️⃣ Start Backend Server
-python app.py
-
-Backend runs at:
-
-http://127.0.0.1:5000
-5️⃣ Run Frontend
-
-Open this file directly in your browser:
-
-frontend/index.html
-🔄 Reset Database (For Deployment / Demo)
-Option 1: Hard Reset (Recommended)
-
-Stop backend server
-
-Delete the file:
-
-backend/database/hrms.db
-
-Recreate tables using db.create_all()
-
-Option 2: Script Reset
-python reset_db.py
-📌 Notes
-
-Authentication is intentionally omitted (single-admin assumption)
-
-SQLite is used for simplicity
-
-For production, PostgreSQL is recommended
-
-Vanilla JavaScript is used to demonstrate fundamentals
-
-🧠 Design Decisions
-
-Table-level loaders instead of full-page loaders
-
-Shell-first rendering for better perceived performance
-
-RESTful API structure
-
-Clear separation of UI, logic, and data layers
-
-Enterprise-grade spacing, typography, and interaction patterns
-
-🏁 Assignment Scope
-
-This project demonstrates:
-
-Full-stack development
-
-REST API design
-
-Database modeling
-
-Error handling
-
-UI/UX polish
-
-Production-ready mindset
-
-👤 Author
-
-Karan Kashyap
-HRMS Lite – Full-Stack Assignment
-Powered by Ethara.ai
