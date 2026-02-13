@@ -243,9 +243,3 @@ This project demonstrates:
 - Error handling
 - UI/UX polish
 - Production-ready mindset
-
-
-
-## 👤 Author
-**Karan Kashyap**  
-**HRMS Lite – Full-Stack Assignment**
